@@ -55,13 +55,14 @@ export default function WhoWeWorkWith() {
             <div
               className="w-9 h-9 flex items-center justify-center rounded-[8px] text-base"
               style={{ border: '1px solid rgba(255,255,255,0.1)' }}
+              aria-hidden="true"
             >
               {client.icon}
             </div>
             <div className="text-[17px] font-normal text-white/85 tracking-tight leading-snug">
               {client.title}
             </div>
-            <div className="text-[13px] font-light text-white/32 leading-[1.65]">
+            <div className="text-[13px] font-light text-white/30 leading-[1.65]">
               {client.description}
             </div>
           </div>

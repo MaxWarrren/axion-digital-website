@@ -1,9 +1,9 @@
 export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-16 py-7">
-      <span className="text-[13px] font-bold tracking-[0.2em] uppercase text-white">
+      <a href="/" className="text-[13px] font-bold tracking-[0.2em] uppercase text-white">
         AXION
-      </span>
+      </a>
 
       <div className="absolute left-1/2 -translate-x-1/2 flex gap-10">
         {['Services', 'Work', 'About', 'Contact'].map((link) => (

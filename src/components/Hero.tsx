@@ -63,10 +63,6 @@ export default function Hero() {
         </div>
 
         <div className="flex-1 flex items-center justify-center relative">
-          <div
-            className="absolute right-0 top-0 bottom-0 w-[18%] z-10 pointer-events-none rounded-r-[14px]"
-            style={{ background: 'linear-gradient(to left, #070707, transparent)' }}
-          />
           <DashboardPlayer />
         </div>
 

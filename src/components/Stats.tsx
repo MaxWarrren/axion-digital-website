@@ -7,7 +7,7 @@ const STATS = [
 
 export default function Stats() {
   return (
-    <section className="max-w-[1400px] mx-auto px-16 py-28">
+    <section id="contact" className="max-w-[1400px] mx-auto px-16 py-28">
       <div className="flex gap-20 items-start">
         <div className="flex-[0_0_360px]">
           <p className="text-[11px] font-normal tracking-[0.1em] uppercase text-white/25 mb-6">
