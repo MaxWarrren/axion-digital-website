@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import WhoWeWorkWith from '@/components/WhoWeWorkWith';
+import Requirements from '@/components/Requirements';
 
 const Divider = () => (
   <div className="max-w-[1400px] mx-auto px-16">
@@ -15,6 +16,8 @@ export default function Home() {
       <Hero />
       <Divider />
       <WhoWeWorkWith />
+      <Divider />
+      <Requirements />
     </main>
   );
 }
