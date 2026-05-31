@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import WhatWeBuild from '@/components/WhatWeBuild';
 import WhoWeWorkWith from '@/components/WhoWeWorkWith';
 import Requirements from '@/components/Requirements';
 import Stats from '@/components/Stats';
@@ -15,6 +16,8 @@ export default function Home() {
     <main className="bg-[#070707] min-h-screen text-white font-sans">
       <Navbar />
       <Hero />
+      <Divider />
+      <WhatWeBuild />
       <Divider />
       <WhoWeWorkWith />
       <Divider />

@@ -11,3 +11,27 @@
 html {
   background: #070707;
 }
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide-up {
+  animation: fadeSlideUp 0.5s ease forwards;
+}
+
+@keyframes progressGrow {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
