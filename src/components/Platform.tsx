@@ -146,7 +146,7 @@ export default function Platform() {
             <div className="flex items-start justify-between">
               <div>
                 <h3 className="text-[14px] font-normal" style={{ color: 'rgba(255,255,255,0.75)' }}>Good morning, User</h3>
-                <p className="text-[12px] mt-0.5" style={{ color: 'rgba(255,255,255,0.25)' }}>Here's what's running across your platform today</p>
+                <p className="text-[12px] mt-0.5" style={{ color: 'rgba(255,255,255,0.25)' }}>Here&apos;s what&apos;s running across your platform today</p>
               </div>
               <div
                 className="px-3 py-1.5 rounded-[6px] text-[11px] flex items-center gap-2"

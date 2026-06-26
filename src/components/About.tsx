@@ -11,7 +11,7 @@ export default function About() {
             University-backed AI consulting, built from the frontier.
           </h2>
           <p className="text-[15px] font-light leading-[1.75] max-w-[480px]" style={{ color: 'rgba(255,255,255,0.35)' }}>
-            Max & his team founded Axion Digital with university grant funding to explore how frontier AI can be applied to real business operations. Since 2024, we've been working directly with the most advanced language models available — building systems that go far beyond basic automation to create genuine operational leverage for the businesses we partner with.
+            Max & his team founded Axion Digital with university grant funding to explore how frontier AI can be applied to real business operations. Since 2024, we&apos;ve been working directly with the most advanced language models available — building systems that go far beyond basic automation to create genuine operational leverage for the businesses we partner with.
           </p>
         </div>
 

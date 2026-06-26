@@ -175,7 +175,7 @@ export default function HeroDashboard() {
             <div className="flex items-center justify-between">
               <div>
                 <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.72)', fontWeight: 400 }}>Good morning, User</p>
-                <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.22)', marginTop: 2 }}>Here's what's running today</p>
+                <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.22)', marginTop: 2 }}>Here&apos;s what&apos;s running today</p>
               </div>
               <div
                 className="px-2.5 py-1 rounded-[5px] flex items-center gap-1.5"
