@@ -3,12 +3,10 @@
 import { useState, useEffect, useRef } from 'react';
 
 const WORDS = [
-  'Insurance Brokerages',
-  'Accounting Firms',
-  'Real-Estate Brokerages',
-  'Property Management Firms',
-  'Home Service Companies',
-  'Independent Franchises',
+  'Professional Service Firms',
+  'Retail & CPG Brands',
+  'B2B Agencies',
+  'Real-estate Brokerages'
 ];
 
 const TYPE_SPEED = 65;

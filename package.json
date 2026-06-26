@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@calcom/embed-react": "^1.5.3",
     "@remotion/player": "^4.0.469",
     "next": "14.2.35",
     "react": "^18",

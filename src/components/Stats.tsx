@@ -1,51 +1,60 @@
-const STATS = [
-  { number: '200+',  label: 'Hours of manual work automated per client per year' },
-  { number: '30+',   label: 'AI agents deployed across client operations' },
-  { number: '2000+', label: 'Supported app integrations across our platform stack' },
-  { number: '24/7',  label: 'Hosting & uptime on all deployed systems' },
+// TODO: replace placeholder metrics/copy with real client outcomes
+const RESULTS = [
+  {
+    metric: '10–20 hrs',
+    unit: 'saved per week',
+    detail: 'Manual back-office work — data entry, scheduling, follow-ups — handed off to automated systems and AI agents.',
+  },
+  {
+    metric: '3–5×',
+    unit: 'capacity without hiring',
+    detail: 'Take on more clients and projects without adding overhead — scale your fulfillment and operations, not your headcount.',
+  },
+  {
+    metric: '2–3×',
+    unit: 'faster response times',
+    detail: 'AI agents answer, route, and qualify leads and customer inquiries in minutes instead of hours or days.',
+  },
+  {
+    metric: '1',
+    unit: 'unified platform',
+    detail: 'Every tool, dataset, and workflow consolidated into a single operating system your whole team runs on.',
+  },
 ];
 
 export default function Stats() {
   return (
-    <section id="contact" className="max-w-[1400px] mx-auto px-16 py-28">
+    <section className="max-w-[1400px] mx-auto px-16 py-28">
       <div className="flex gap-20 items-start">
+        {/* Left copy */}
         <div className="flex-[0_0_360px]">
           <p className="text-[11px] font-normal tracking-[0.1em] uppercase text-white/25 mb-6">
-            Stats
+            Results
           </p>
           <h2 className="text-[42px] font-light leading-[1.1] tracking-[-0.02em] text-white mb-5">
-            Systems that drive real
+            Systems that drive real results{' '}
             <br />
-            results{' '}
             <span style={{ color: 'rgba(255,255,255,0.28)' }}>without the fluff.</span>
           </h2>
           <p className="text-[14px] font-light leading-[1.7] mb-6" style={{ color: 'rgba(255,255,255,0.30)' }}>
-            We&apos;ve partnered with owner-operated businesses across insurance, real estate, home services, and more.
+            We&apos;ve partnered with owner-operated businesses across consumer services, real estate, B2B, and retail.
           </p>
           <p className="text-[13px] font-light leading-[1.7]" style={{ color: 'rgba(255,255,255,0.25)' }}>
-            When you work with us, you get direct access to the experts — 24/7 — without the bloated hierarchy of a big consulting firm.
+            You get direct access to the experts who build your systems — without the bloated hierarchy or markup of a big consulting firm.
           </p>
         </div>
 
+        {/* Right 2x2 grid */}
         <div className="flex-1 grid grid-cols-2 gap-3">
-          {STATS.map((stat) => (
+          {RESULTS.map((r) => (
             <div
-              key={stat.number}
-              className="rounded-xl p-9 flex flex-col gap-3"
-              style={{
-                border: '1px solid rgba(255,255,255,0.08)',
-                background: 'rgba(255,255,255,0.015)',
-              }}
+              key={r.unit}
+              className="rounded-xl p-8 flex flex-col gap-2"
+              style={{ border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.015)' }}
             >
-              <div
-                className="text-[52px] font-light leading-none"
-                style={{ letterSpacing: '-0.04em' }}
-              >
-                {stat.number}
-              </div>
-              <div className="text-[13px] font-light leading-[1.5]" style={{ color: 'rgba(255,255,255,0.35)' }}>
-                {stat.label}
-              </div>
+              <div className="text-[44px] font-light leading-none tracking-[-0.04em]">{r.metric}</div>
+              <div className="text-[14px] font-normal text-white/55 mt-1">{r.unit}</div>
+              <div className="text-[12px] font-light leading-[1.6] text-white/30 mt-1">{r.detail}</div>
             </div>
           ))}
         </div>

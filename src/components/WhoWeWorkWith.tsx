@@ -9,46 +9,35 @@ const ROTATE_MS = 4500;
 
 const INDUSTRIES: Industry[] = [
   {
-    name: 'Financial Services',
+    name: 'Consumer Services',
     items: [
-      { name: 'Accounting Firms', help: 'Automate bookkeeping, document intake, and client communication so staff scale without new hires.' },
-      { name: 'Insurance Brokerages', help: 'Streamline client intake, policy renewals, and compliance workflows so brokers focus on selling.' },
-      { name: 'Financial Planning & Wealth Management', help: 'Automate client onboarding, portfolio reporting, and review prep with full data privacy.' },
+      { name: 'Home & Trade Services', help: 'HVAC, roofing, landscaping, solar, and local operators — scheduling, dispatch, quoting, and follow-up on autopilot.' },
+      { name: 'Health & Wellness Practices', help: 'Dental, chiropractic, med-spa, and therapy practices — intake, booking, reminders, and billing that run themselves.' },
+      { name: 'Professional & Personal Services', help: 'Accounting, legal, financial, and personal-service firms — client intake, document work, and communication automated end-to-end.' },
     ],
   },
   {
-    name: 'Home Services',
+    name: 'Real Estate',
     items: [
-      { name: 'HVAC', help: 'Auto-dispatch, smart scheduling, and service follow-ups that keep techs booked and customers retained.' },
-      { name: 'Roofing', help: 'Instant quoting, lead follow-up, and job tracking from first call to final invoice.' },
-      { name: 'Landscaping', help: 'Route and crew scheduling, recurring billing, and seasonal re-engagement on autopilot.' },
-      { name: 'Solar & Energy', help: 'Nurture long sales cycles with automated proposals, financing follow-up, and install pipeline tracking.' },
+      { name: 'Brokerages & Agents', help: 'Lead nurturing, listing operations, and performance dashboards in one connected platform.' },
+      { name: 'Property Management', help: 'Tenant communication, maintenance dispatch, renewals, and owner reporting on autopilot.' },
+      { name: 'Investment & Development', help: 'Deal flow, underwriting support, investor reporting, and project tracking end-to-end.' },
     ],
   },
   {
-    name: 'Real-Estate',
+    name: 'B2B Companies',
     items: [
-      { name: 'Independent Brokerages', help: 'Lead nurturing, listing operations, and agent performance dashboards in one connected platform.' },
-      { name: 'Property Management', help: 'Automate tenant communications, maintenance dispatch, lease renewals, and owner reporting.' },
-      { name: 'Investment Firms', help: 'Track deal flow, support underwriting, and automate investor reporting end-to-end.' },
-      { name: 'Construction / GC', help: 'Bid management, project tracking, and subcontractor coordination without the spreadsheet chaos.' },
+      { name: 'Agencies & Professional Services', help: 'Pipeline, proposals, onboarding, and delivery streamlined so billable teams stay on the work.' },
+      { name: 'SaaS & Technology', help: 'Lead routing, onboarding, and customer-success workflows that scale revenue without scaling headcount.' },
+      { name: 'Wholesale & Distribution', help: 'Orders, inventory, and accounts connected so the back office runs itself across every channel.' },
     ],
   },
   {
-    name: 'Medical Practices',
+    name: 'Retail / CPG',
     items: [
-      { name: 'Dentists', help: 'Scheduling, recall reminders, and insurance verification that keep chairs full and admin light.' },
-      { name: 'Chiropractors', help: 'Automated intake, appointment flow, and billing so the front desk runs itself.' },
-      { name: 'Med-Spas', help: 'Online booking, membership management, and follow-up campaigns that drive repeat visits.' },
-      { name: 'Physical Therapy', help: 'Patient intake, plan-of-care tracking, and claims support with HIPAA-grade privacy.' },
-    ],
-  },
-  {
-    name: 'Franchises & SMBs',
-    items: [
-      { name: 'Independent Franchises', help: 'Standardized AI systems that give every location enterprise tooling without enterprise overhead.' },
-      { name: 'Multi-Unit Operators', help: 'Consolidated reporting and operations across locations from a single source of truth.' },
-      { name: 'Owner-Operated SMBs', help: 'Replace the manual back office with automation so owners get their time back.' },
+      { name: 'E-Commerce & DTC Brands', help: 'Storefront, inventory, and customer data unified with automated marketing and fulfillment.' },
+      { name: 'Consumer Products', help: 'Demand forecasting, automated reordering, and performance tracking across retail and DTC channels.' },
+      { name: 'Multi-Location & Food/Bev', help: 'Consolidated operations and reporting across every location from a single source of truth.' },
     ],
   },
 ];
@@ -78,22 +67,20 @@ export default function WhoWeWorkWith() {
 
   return (
     <section id="work" className="max-w-[1400px] mx-auto px-16 py-28">
-      <div className="flex items-baseline justify-between mb-12 gap-6 flex-wrap">
-        <div>
-          <p className="text-[11px] font-normal tracking-[0.1em] uppercase text-white/25 mb-3">
-            Who we work with
-          </p>
-          <h2 className="text-[34px] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[620px]">
-            Built for owner-operated businesses across the industries we know best.
-          </h2>
-        </div>
-        <span className="text-[12px] font-light text-white/25">
+      <div className="text-center mb-10">
+        <p className="text-[11px] font-normal tracking-[0.1em] uppercase text-white/25 mb-3">
+          Who we work with
+        </p>
+        <h2 className="text-[34px] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[620px] mx-auto">
+          Built for owner-operated businesses across the industries we know best.
+        </h2>
+        <span className="block text-[12px] font-light text-white/25 mt-5">
           {pinned ? 'Paused · tap to resume' : 'Auto-rotating · tap to explore'}
         </span>
       </div>
 
       {/* Industry selector */}
-      <div className="flex flex-wrap gap-x-8 gap-y-3 mb-10">
+      <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-10">
         {INDUSTRIES.map((industry, i) => {
           const isActive = i === active;
           return (

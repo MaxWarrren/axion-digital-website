@@ -43,7 +43,7 @@ const SERVICES: Service[] = [
   {
     title: 'Automated Growth Systems',
     description:
-      'Lead capture, nurturing, and follow-up that runs itself — so opportunities never slip through the cracks while you focus on the work.',
+      'Paid ad funnels, content engines, and outreach campaigns that run on autopilot — driving a steady flow of qualified leads while you focus on the work.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 22 22" {...stroke}>
         <path d="M3 16l4.5-4.5 3 3L18 7" />
@@ -53,14 +53,16 @@ const SERVICES: Service[] = [
     ),
   },
   {
-    title: 'Custom Business Software',
+    title: 'Predictive Analytics & Intelligence',
     description:
-      'Internal tools and platforms built around how your business actually works — not the compromises of off-the-shelf products.',
+      'Custom machine learning models and reporting dashboards built for data-heavy businesses — reliable forecasting, trend analysis, and real-time visibility across your entire operation.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 22 22" {...stroke}>
-        <rect x="2.5" y="4" width="17" height="14" rx="2" />
-        <path d="M2.5 8h17" />
-        <path d="M8 12l-1.5 1.5L8 15M14 12l1.5 1.5L14 15" />
+        <path d="M3 16l4-5 3.5 3L14 8l5 4" />
+        <path d="M3 19h16" />
+        <circle cx="7" cy="11" r="1.2" fill="rgba(255,255,255,0.55)" stroke="none" />
+        <circle cx="10.5" cy="14" r="1.2" fill="rgba(255,255,255,0.55)" stroke="none" />
+        <circle cx="14" cy="8" r="1.2" fill="rgba(255,255,255,0.55)" stroke="none" />
       </svg>
     ),
   },
@@ -91,7 +93,7 @@ const SERVICES: Service[] = [
 
 export default function WhatWeBuild() {
   return (
-    <section id="services" className="max-w-[1400px] mx-auto px-16 py-28">
+    <section id="services" className="max-w-[1400px] mx-auto px-16 pt-28 pb-0">
       <p className="text-[11px] font-normal tracking-[0.1em] uppercase text-white/25 mb-3">
         What we build for you
       </p>
@@ -123,6 +125,47 @@ export default function WhatWeBuild() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* ── Convergence connector ── */}
+
+      {/* Bracket arms spanning the grid, converging to a center point */}
+      <svg
+        width="100%"
+        height="52"
+        viewBox="0 0 1200 52"
+        preserveAspectRatio="none"
+        className="block mt-0"
+        aria-hidden="true"
+      >
+        <path
+          d="M 6 0 L 6 26 Q 6 48 26 48 L 598 48"
+          stroke="rgba(255,255,255,0.09)"
+          strokeWidth="1"
+          fill="none"
+        />
+        <path
+          d="M 1194 0 L 1194 26 Q 1194 48 1174 48 L 602 48"
+          stroke="rgba(255,255,255,0.09)"
+          strokeWidth="1"
+          fill="none"
+        />
+        <circle cx="600" cy="48" r="2.5" fill="rgba(255,255,255,0.14)" />
+      </svg>
+
+      {/* Centered drop: "all of it → one platform." with a downward chevron */}
+      <div className="flex flex-col items-center text-center py-8">
+        <p className="text-[10px] tracking-[0.18em] uppercase mb-3" style={{ color: 'rgba(255,255,255,0.18)' }}>
+          all of it, in
+        </p>
+        <p className="text-[34px] font-light leading-[1.05] tracking-[-0.025em]" style={{ color: 'rgba(255,255,255,0.55)' }}>
+          one platform.
+        </p>
+        <svg width="40" height="64" viewBox="0 0 40 64" fill="none" className="mt-5" aria-hidden="true">
+          <line x1="20" y1="0" x2="20" y2="44" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
+          <circle cx="20" cy="0" r="2" fill="rgba(255,255,255,0.18)" />
+          <path d="M 12 38 L 20 50 L 28 38" stroke="rgba(255,255,255,0.16)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </div>
     </section>
   );
