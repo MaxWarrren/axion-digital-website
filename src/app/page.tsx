@@ -9,7 +9,7 @@ import FAQ from '@/components/FAQ';
 import CTASection from '@/components/CTASection';
 
 const Divider = () => (
-  <div className="max-w-[1400px] mx-auto px-16">
+  <div className="max-w-[1400px] mx-auto px-5 md:px-16">
     <div className="h-px" style={{ background: 'rgba(255,255,255,0.06)' }} />
   </div>
 );

@@ -1,3 +1,5 @@
+import ScaleToFit from './ScaleToFit';
+
 const NAV_ITEMS = [
   { label: 'Overview', active: true },
   { label: 'Automations' },
@@ -42,20 +44,21 @@ const ACCESS_LAYERS = [
 
 export default function Platform() {
   return (
-    <section className="max-w-[1400px] mx-auto px-16 pt-10 pb-28">
-      <div className="mb-14">
+    <section className="max-w-[1400px] mx-auto px-5 md:px-16 pt-8 md:pt-10 pb-20 md:pb-28">
+      <div className="mb-10 md:mb-14">
         <p className="text-[11px] font-normal tracking-[0.1em] uppercase mb-3" style={{ color: 'rgba(255,255,255,0.25)' }}>
           The Platform
         </p>
-        <h2 className="text-[34px] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[560px]">
+        <h2 className="text-[26px] md:text-[34px] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[560px]">
           Every system we build, unified in one custom platform.
         </h2>
-        <p className="mt-4 text-[15px] font-light leading-[1.75] max-w-[520px]" style={{ color: 'rgba(255,255,255,0.35)' }}>
+        <p className="mt-4 text-[14px] md:text-[15px] font-light leading-[1.75] max-w-[520px]" style={{ color: 'rgba(255,255,255,0.35)' }}>
           Every deliverable ships inside a single operating system your whole business runs on — accessible by your team, your clients, and the public, each with the right level of access.
         </p>
       </div>
 
-      {/* Browser mockup */}
+      {/* Browser mockup — built from fixed-px panels, so it scales rather than reflows */}
+      <ScaleToFit minWidth={820}>
       <div className="rounded-2xl overflow-hidden" style={{ border: '1px solid rgba(255,255,255,0.08)' }}>
 
         {/* Chrome bar */}
@@ -226,9 +229,10 @@ export default function Platform() {
           </div>
         </div>
       </div>
+      </ScaleToFit>
 
       {/* Access layer labels */}
-      <div className="grid grid-cols-3 gap-6 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
         {ACCESS_LAYERS.map(({ label, desc }) => (
           <div key={label} className="flex flex-col gap-2">
             <p className="text-[13px] font-normal" style={{ color: 'rgba(255,255,255,0.55)' }}>{label}</p>

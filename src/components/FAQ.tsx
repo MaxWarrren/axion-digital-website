@@ -37,30 +37,30 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="max-w-[1400px] mx-auto px-16 py-28">
+    <section className="max-w-[1400px] mx-auto px-5 md:px-16 py-20 md:py-28">
       <div className="max-w-[820px] mx-auto text-center">
         <p className="text-[11px] font-normal tracking-[0.1em] uppercase text-white/25 mb-4">
           FAQ
         </p>
-        <h2 className="text-[42px] font-light leading-[1.1] tracking-[-0.02em] text-white mb-5">
+        <h2 className="text-[30px] md:text-[42px] font-light leading-[1.1] tracking-[-0.02em] text-white mb-5">
           Questions, answered.
         </h2>
-        <p className="text-[15px] font-light leading-[1.7] max-w-[460px] mx-auto" style={{ color: 'rgba(255,255,255,0.3)' }}>
+        <p className="text-[14px] md:text-[15px] font-light leading-[1.7] max-w-[460px] mx-auto" style={{ color: 'rgba(255,255,255,0.3)' }}>
           Still have something on your mind? Book a free consultation and we’ll walk through it together.
         </p>
       </div>
 
-      <div className="max-w-[820px] mx-auto mt-14">
+      <div className="max-w-[820px] mx-auto mt-10 md:mt-14">
         {FAQS.map((faq, i) => {
           const isOpen = open === i;
           return (
             <div key={i} style={{ borderTop: '1px solid rgba(255,255,255,0.08)', ...(i === FAQS.length - 1 ? { borderBottom: '1px solid rgba(255,255,255,0.08)' } : {}) }}>
               <button
                 onClick={() => setOpen(isOpen ? null : i)}
-                className="w-full flex items-center justify-between gap-6 py-6 text-left"
+                className="w-full flex items-center justify-between gap-4 md:gap-6 py-5 md:py-6 text-left"
                 aria-expanded={isOpen}
               >
-                <span className="text-[17px] font-normal tracking-tight" style={{ color: isOpen ? '#fff' : 'rgba(255,255,255,0.75)' }}>
+                <span className="text-[15px] md:text-[17px] font-normal tracking-tight" style={{ color: isOpen ? '#fff' : 'rgba(255,255,255,0.75)' }}>
                   {faq.q}
                 </span>
                 <span
@@ -72,13 +72,18 @@ export default function FAQ() {
                   </svg>
                 </span>
               </button>
+              {/* grid-rows 0fr→1fr animates to the answer's natural height, so
+                  long answers can't clip at narrow widths the way a fixed
+                  max-height would. */}
               <div
-                className="overflow-hidden transition-all duration-300 ease-out"
-                style={{ maxHeight: isOpen ? 480 : 0, opacity: isOpen ? 1 : 0 }}
+                className="grid transition-all duration-300 ease-out"
+                style={{ gridTemplateRows: isOpen ? '1fr' : '0fr', opacity: isOpen ? 1 : 0 }}
               >
-                <p className="text-[14px] font-light leading-[1.75] pb-7 pr-10" style={{ color: 'rgba(255,255,255,0.4)' }}>
-                  {faq.a}
-                </p>
+                <div className="overflow-hidden">
+                  <p className="text-[14px] font-light leading-[1.75] pb-7 pr-0 md:pr-10" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                    {faq.a}
+                  </p>
+                </div>
               </div>
             </div>
           );

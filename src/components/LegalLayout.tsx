@@ -10,11 +10,11 @@ type Props = {
 export default function LegalLayout({ title, lastUpdated, intro, sections }: Props) {
   return (
     <main className="bg-[#070707] min-h-screen text-white font-sans">
-      <section className="max-w-[820px] mx-auto px-16 pt-44 pb-32">
+      <section className="max-w-[820px] mx-auto px-5 md:px-16 pt-28 md:pt-44 pb-20 md:pb-32">
         <p className="text-[11px] font-normal tracking-[0.14em] uppercase text-white/25 mb-4">
           Legal
         </p>
-        <h1 className="text-[44px] font-light leading-[1.1] tracking-[-0.025em] text-white">
+        <h1 className="text-[30px] md:text-[44px] font-light leading-[1.1] tracking-[-0.025em] text-white">
           {title}
         </h1>
         <p className="mt-4 text-[13px] font-light text-white/30">Last updated: {lastUpdated}</p>

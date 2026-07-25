@@ -20,11 +20,11 @@ export default function Footer() {
 
   return (
     <footer style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-      <div className="max-w-[1400px] mx-auto px-16 py-16">
-        <div className="flex items-start justify-between gap-10 flex-wrap">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-16 py-12 md:py-16">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-10 flex-wrap">
 
           {/* Brand */}
-          <div className="flex flex-col gap-4 max-w-[280px]">
+          <div className="flex flex-col gap-4 w-full md:max-w-[280px]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/logos/axion-text-transparent.png" alt="Axion" className="h-[19px] w-auto self-start" />
             <p className="text-[13px] font-light leading-[1.7]" style={{ color: 'rgba(255,255,255,0.3)' }}>
@@ -61,23 +61,23 @@ export default function Footer() {
           </div>
 
           {/* Link columns */}
-          <div className="flex gap-20">
-            <div className="flex flex-col gap-3">
+          <div className="flex gap-16 md:gap-20">
+            <div className="flex flex-col gap-1">
               <span className="text-[11px] tracking-[0.12em] uppercase mb-1" style={{ color: 'rgba(255,255,255,0.22)' }}>
                 Navigate
               </span>
               {NAV.map(({ label, href }) => (
-                <Link key={label} href={href} className="text-[13px] font-light hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                <Link key={label} href={href} className="text-[13px] font-light py-2 hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.4)' }}>
                   {label}
                 </Link>
               ))}
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-1">
               <span className="text-[11px] tracking-[0.12em] uppercase mb-1" style={{ color: 'rgba(255,255,255,0.22)' }}>
                 Legal
               </span>
               {LEGAL.map(({ label, href }) => (
-                <Link key={label} href={href} className="text-[13px] font-light hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                <Link key={label} href={href} className="text-[13px] font-light py-2 hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.4)' }}>
                   {label}
                 </Link>
               ))}
@@ -87,7 +87,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div
-          className="mt-14 pt-8 flex items-center justify-between gap-4 flex-wrap"
+          className="mt-10 md:mt-14 pt-6 md:pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 md:gap-4 flex-wrap"
           style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}
         >
           <p className="text-[12px] font-light" style={{ color: 'rgba(255,255,255,0.25)' }}>

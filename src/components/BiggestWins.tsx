@@ -22,13 +22,13 @@ const WINS = [
 
 export default function BiggestWins() {
   return (
-    <section id="wins" className="max-w-[1400px] mx-auto px-16 py-12 scroll-mt-24">
+    <section id="wins" className="max-w-[1400px] mx-auto px-5 md:px-16 py-10 md:py-12 scroll-mt-24">
       <p className="text-[11px] font-normal tracking-[0.14em] uppercase mb-7" style={{ color: 'rgba(255,255,255,0.25)' }}>
         Our biggest client wins
       </p>
-      <div className="grid grid-cols-3 gap-[1px] rounded-xl overflow-hidden" style={{ background: 'rgba(255,255,255,0.06)' }}>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-[1px] rounded-xl overflow-hidden" style={{ background: 'rgba(255,255,255,0.06)' }}>
         {WINS.map((win, i) => (
-          <div key={i} className="bg-[#070707] px-8 py-7 flex flex-col gap-5">
+          <div key={i} className="bg-[#070707] px-6 py-6 md:px-8 md:py-7 flex flex-col gap-5">
             {/* Client */}
             <div className="flex flex-col gap-0.5">
               <span className="text-[16px] font-normal text-white/90 tracking-tight">{win.name}</span>

@@ -10,6 +10,11 @@
 
 html {
   background: #070707;
+  /* Safety net: a 3D-tilted mockup or long headline must never scroll the page sideways.
+     `clip` (not `hidden`) so it doesn't become a scroll container and break the fixed navbar. */
+  overflow-x: clip;
+  /* Stop iOS from inflating text when the phone is rotated to landscape. */
+  -webkit-text-size-adjust: 100%;
 }
 
 @keyframes fadeSlideUp {

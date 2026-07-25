@@ -41,7 +41,7 @@ const TEAM = [
 ];
 
 const Divider = () => (
-  <div className="max-w-[1400px] mx-auto px-16">
+  <div className="max-w-[1400px] mx-auto px-5 md:px-16">
     <div className="h-px" style={{ background: 'rgba(255,255,255,0.06)' }} />
   </div>
 );
@@ -50,17 +50,17 @@ export default function AboutPage() {
   return (
     <main className="bg-[#070707] min-h-screen text-white font-sans">
       {/* Page header */}
-      <section className="max-w-[1400px] mx-auto px-16 pt-44 pb-16">
+      <section className="max-w-[1400px] mx-auto px-5 md:px-16 pt-28 md:pt-44 pb-12 md:pb-16">
         <p className="text-[11px] font-normal tracking-[0.14em] uppercase text-white/25 mb-4">
           About
         </p>
-        <h1 className="text-[56px] font-light leading-[1.08] tracking-[-0.025em] text-white max-w-[820px]">
+        <h1 className="text-[34px] md:text-[56px] font-light leading-[1.08] tracking-[-0.025em] text-white max-w-[820px]">
           A team turning frontier AI into real operational leverage.
         </h1>
-        <p className="mt-6 text-[16px] font-light leading-[1.8] max-w-[640px]" style={{ color: 'rgba(255,255,255,0.35)' }}>
+        <p className="mt-5 md:mt-6 text-[15px] md:text-[16px] font-light leading-[1.8] max-w-[640px]" style={{ color: 'rgba(255,255,255,0.35)' }}>
           What began as university-funded research into applied AI has grown into a hands-on consulting and development team. We embed with owner-operators, learn how their business actually runs, and build the automation, software, and AI agents that let them scale without piling on overhead.
         </p>
-        <p className="mt-5 text-[16px] font-light leading-[1.8] max-w-[640px]" style={{ color: 'rgba(255,255,255,0.35)' }}>
+        <p className="mt-5 text-[15px] md:text-[16px] font-light leading-[1.8] max-w-[640px]" style={{ color: 'rgba(255,255,255,0.35)' }}>
           We’ve been working with frontier language models since 2024, and we bring that edge to every system we ship — practical tools your team can run their day on, not science projects.
         </p>
       </section>
@@ -68,29 +68,29 @@ export default function AboutPage() {
       <Divider />
 
       {/* Leadership */}
-      <section className="max-w-[1400px] mx-auto px-16 py-24">
-        <p className="text-[11px] font-normal tracking-[0.1em] uppercase text-white/25 mb-12">
+      <section className="max-w-[1400px] mx-auto px-5 md:px-16 py-16 md:py-24">
+        <p className="text-[11px] font-normal tracking-[0.1em] uppercase text-white/25 mb-10 md:mb-12">
           Leadership
         </p>
-        <div className="flex flex-col gap-16">
+        <div className="flex flex-col gap-14 md:gap-16">
           {LEADERSHIP.map(({ name, title, photo, bio, linkedin }) => (
-            <div key={name} className="flex gap-12 items-start">
+            <div key={name} className="flex flex-col sm:flex-row gap-6 sm:gap-12 items-start">
               {/* Photo */}
               <div
-                className="relative rounded-2xl overflow-hidden flex-shrink-0"
-                style={{ width: 300, aspectRatio: '3 / 4', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)' }}
+                className="relative rounded-2xl overflow-hidden flex-shrink-0 w-full max-w-[240px] sm:w-[300px] sm:max-w-none"
+                style={{ aspectRatio: '3 / 4', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)' }}
               >
                 <img src={photo} alt={name} className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: 'center top' }} />
               </div>
 
               {/* Details */}
-              <div className="flex-1 pt-2 max-w-[680px]">
-                <h3 className="text-[20px] font-medium text-white tracking-tight">{name}</h3>
+              <div className="w-full sm:flex-1 pt-2 max-w-[680px]">
+                <h3 className="text-[19px] md:text-[20px] font-medium text-white tracking-tight">{name}</h3>
                 <p className="text-[14px] font-light text-white/40 mt-1">{title}</p>
 
                 <div className="mt-6 flex flex-col gap-4">
                   {bio.map((para, i) => (
-                    <p key={i} className="text-[15px] font-light leading-[1.75] text-white/45">{para}</p>
+                    <p key={i} className="text-[14px] md:text-[15px] font-light leading-[1.75] text-white/45">{para}</p>
                   ))}
                 </div>
 
@@ -118,16 +118,16 @@ export default function AboutPage() {
       <Divider />
 
       {/* Team */}
-      <section className="max-w-[1400px] mx-auto px-16 py-24">
+      <section className="max-w-[1400px] mx-auto px-5 md:px-16 py-16 md:py-24">
         <p className="text-[11px] font-normal tracking-[0.1em] uppercase text-white/25 mb-10">
           The team
         </p>
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6">
           {TEAM.map(({ name, title, photo }) => (
             <div key={name} className="flex flex-col items-center text-center gap-4">
               <div
-                className="relative rounded-full overflow-hidden"
-                style={{ width: 132, height: 132, background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.07)' }}
+                className="relative rounded-full overflow-hidden w-[108px] h-[108px] md:w-[132px] md:h-[132px]"
+                style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.07)' }}
               >
                 <img src={photo} alt={name} className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: 'center top' }} />
               </div>

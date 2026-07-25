@@ -23,13 +23,13 @@ const STEPS = [
 
 export default function Process() {
   return (
-    <section className="max-w-[1400px] mx-auto px-16 py-28">
+    <section className="max-w-[1400px] mx-auto px-5 md:px-16 py-20 md:py-28">
       {/* Centered header */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-12 md:mb-16">
         <p className="text-[11px] font-normal tracking-[0.1em] uppercase text-white/25 mb-4">
           How it works
         </p>
-        <h2 className="text-[34px] font-light leading-[1.15] tracking-[-0.02em] text-white">
+        <h2 className="text-[26px] md:text-[34px] font-light leading-[1.15] tracking-[-0.02em] text-white">
           What working with us looks like.
         </h2>
       </div>
@@ -39,7 +39,7 @@ export default function Process() {
         {STEPS.map((step, i) => (
           <div key={step.num} className="w-full flex flex-col items-center">
             <div
-              className="w-full rounded-xl px-8 py-7 flex flex-col items-center text-center gap-3"
+              className="w-full rounded-xl px-6 py-6 md:px-8 md:py-7 flex flex-col items-center text-center gap-3"
               style={{ border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.015)' }}
             >
               <div
@@ -48,7 +48,7 @@ export default function Process() {
               >
                 {step.num}
               </div>
-              <div className="text-[18px] font-normal text-white/85 tracking-tight leading-snug">
+              <div className="text-[17px] md:text-[18px] font-normal text-white/85 tracking-tight leading-snug">
                 {step.title}
               </div>
               <div className="text-[13px] font-light text-white/30 leading-[1.65] max-w-[360px]">

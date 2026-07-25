@@ -66,12 +66,12 @@ export default function WhoWeWorkWith() {
   const current = INDUSTRIES[active];
 
   return (
-    <section id="work" className="max-w-[1400px] mx-auto px-16 py-28">
+    <section id="work" className="max-w-[1400px] mx-auto px-5 md:px-16 py-20 md:py-28">
       <div className="text-center mb-10">
         <p className="text-[11px] font-normal tracking-[0.1em] uppercase text-white/25 mb-3">
           Who we work with
         </p>
-        <h2 className="text-[34px] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[620px] mx-auto">
+        <h2 className="text-[26px] md:text-[34px] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[620px] mx-auto">
           Built for owner-operated businesses across the industries we know best.
         </h2>
         <span className="block text-[12px] font-light text-white/25 mt-5">
@@ -80,7 +80,7 @@ export default function WhoWeWorkWith() {
       </div>
 
       {/* Industry selector */}
-      <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-10">
+      <div className="flex flex-wrap justify-center gap-x-6 md:gap-x-8 gap-y-3 mb-10">
         {INDUSTRIES.map((industry, i) => {
           const isActive = i === active;
           return (
@@ -90,7 +90,7 @@ export default function WhoWeWorkWith() {
               className="relative pb-3 text-left transition-colors duration-200"
             >
               <span
-                className="text-[16px] font-normal tracking-tight"
+                className="text-[14px] md:text-[16px] font-normal tracking-tight"
                 style={{ color: isActive ? '#fff' : 'rgba(255,255,255,0.35)' }}
               >
                 {industry.name}
@@ -123,7 +123,7 @@ export default function WhoWeWorkWith() {
         {current.items.map((item, i) => (
           <div
             key={item.name}
-            className="animate-fade-slide-up bg-[#070707] p-8 flex flex-col gap-3 flex-1 min-w-[240px]"
+            className="animate-fade-slide-up bg-[#070707] p-6 md:p-8 flex flex-col gap-3 flex-1 min-w-full sm:min-w-[240px]"
             style={{ animationDelay: `${i * 70}ms`, opacity: 0 }}
           >
             <div className="text-[15px] font-medium text-white/90 tracking-tight leading-snug">

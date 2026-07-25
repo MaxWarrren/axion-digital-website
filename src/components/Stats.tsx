@@ -24,16 +24,16 @@ const RESULTS = [
 
 export default function Stats() {
   return (
-    <section className="max-w-[1400px] mx-auto px-16 py-28">
-      <div className="flex gap-20 items-start">
+    <section className="max-w-[1400px] mx-auto px-5 md:px-16 py-20 md:py-28">
+      <div className="flex flex-col md:flex-row gap-10 md:gap-20 items-start">
         {/* Left copy */}
-        <div className="flex-[0_0_360px]">
+        <div className="w-full md:flex-[0_0_360px]">
           <p className="text-[11px] font-normal tracking-[0.1em] uppercase text-white/25 mb-6">
             Results
           </p>
-          <h2 className="text-[42px] font-light leading-[1.1] tracking-[-0.02em] text-white mb-5">
+          <h2 className="text-[30px] md:text-[42px] font-light leading-[1.1] tracking-[-0.02em] text-white mb-5">
             Systems that drive real results{' '}
-            <br />
+            <br className="hidden md:inline" />
             <span style={{ color: 'rgba(255,255,255,0.28)' }}>without the fluff.</span>
           </h2>
           <p className="text-[14px] font-light leading-[1.7] mb-6" style={{ color: 'rgba(255,255,255,0.30)' }}>
@@ -45,14 +45,14 @@ export default function Stats() {
         </div>
 
         {/* Right 2x2 grid */}
-        <div className="flex-1 grid grid-cols-2 gap-3">
+        <div className="w-full md:flex-1 grid grid-cols-1 sm:grid-cols-2 gap-3">
           {RESULTS.map((r) => (
             <div
               key={r.unit}
-              className="rounded-xl p-8 flex flex-col gap-2"
+              className="rounded-xl p-6 md:p-8 flex flex-col gap-2"
               style={{ border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.015)' }}
             >
-              <div className="text-[44px] font-light leading-none tracking-[-0.04em]">{r.metric}</div>
+              <div className="text-[36px] md:text-[44px] font-light leading-none tracking-[-0.04em]">{r.metric}</div>
               <div className="text-[14px] font-normal text-white/55 mt-1">{r.unit}</div>
               <div className="text-[12px] font-light leading-[1.6] text-white/30 mt-1">{r.detail}</div>
             </div>

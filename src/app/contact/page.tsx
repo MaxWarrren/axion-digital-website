@@ -10,22 +10,22 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main className="bg-[#070707] min-h-screen text-white font-sans">
-      <section className="max-w-[1400px] mx-auto px-16 pt-44 pb-12">
+      <section className="max-w-[1400px] mx-auto px-5 md:px-16 pt-28 md:pt-44 pb-10 md:pb-12">
         <p className="text-[11px] font-normal tracking-[0.14em] uppercase text-white/25 mb-4">
           Contact
         </p>
-        <h1 className="text-[56px] font-light leading-[1.08] tracking-[-0.025em] text-white max-w-[720px]">
+        <h1 className="text-[34px] md:text-[56px] font-light leading-[1.08] tracking-[-0.025em] text-white max-w-[720px]">
           Book your free consultation.
         </h1>
-        <p className="mt-6 text-[16px] font-light leading-[1.75] max-w-[520px]" style={{ color: 'rgba(255,255,255,0.35)' }}>
+        <p className="mt-5 md:mt-6 text-[15px] md:text-[16px] font-light leading-[1.75] max-w-[520px]" style={{ color: 'rgba(255,255,255,0.35)' }}>
           Pick a time that works for you. We’ll learn about your business and show you exactly where AI and automation can save your team hours every week.
         </p>
       </section>
 
-      <section className="max-w-[1400px] mx-auto px-16 pb-32">
+      <section className="max-w-[1400px] mx-auto px-5 md:px-16 pb-20 md:pb-32">
         <div
-          className="rounded-2xl overflow-hidden"
-          style={{ border: '1px solid rgba(255,255,255,0.08)', height: 760, background: 'rgba(255,255,255,0.01)' }}
+          className="rounded-2xl overflow-hidden h-[640px] md:h-[760px]"
+          style={{ border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.01)' }}
         >
           <CalEmbed />
         </div>

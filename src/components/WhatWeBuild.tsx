@@ -93,22 +93,22 @@ const SERVICES: Service[] = [
 
 export default function WhatWeBuild() {
   return (
-    <section id="services" className="max-w-[1400px] mx-auto px-16 pt-28 pb-0">
+    <section id="services" className="max-w-[1400px] mx-auto px-5 md:px-16 pt-20 md:pt-28 pb-0">
       <p className="text-[11px] font-normal tracking-[0.1em] uppercase text-white/25 mb-3">
         What we build for you
       </p>
-      <h2 className="text-[34px] font-light leading-[1.15] tracking-[-0.02em] text-white mb-12 max-w-[560px]">
+      <h2 className="text-[26px] md:text-[34px] font-light leading-[1.15] tracking-[-0.02em] text-white mb-10 md:mb-12 max-w-[560px]">
         One partner for every system your business runs on.
       </h2>
 
       <div
-        className="grid grid-cols-3 gap-[1px] rounded-xl overflow-hidden"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1px] rounded-xl overflow-hidden"
         style={{ background: 'rgba(255,255,255,0.06)' }}
       >
         {SERVICES.map((service) => (
           <div
             key={service.title}
-            className="bg-[#070707] hover:bg-white/[0.025] transition-colors duration-200 p-10 flex flex-col gap-4"
+            className="bg-[#070707] hover:bg-white/[0.025] transition-colors duration-200 p-7 md:p-10 flex flex-col gap-4"
           >
             <div
               className="w-11 h-11 flex items-center justify-center rounded-[10px]"
@@ -117,7 +117,7 @@ export default function WhatWeBuild() {
             >
               {service.icon}
             </div>
-            <div className="text-[17px] font-normal text-white/85 tracking-tight leading-snug">
+            <div className="text-[16px] md:text-[17px] font-normal text-white/85 tracking-tight leading-snug">
               {service.title}
             </div>
             <div className="text-[13px] font-light text-white/30 leading-[1.65]">
@@ -135,7 +135,9 @@ export default function WhatWeBuild() {
         height="52"
         viewBox="0 0 1200 52"
         preserveAspectRatio="none"
-        className="block mt-0"
+        /* The converging brackets only read against the 3-column grid; on a
+           single-column stack they squash into noise. */
+        className="hidden lg:block mt-0"
         aria-hidden="true"
       >
         <path
@@ -154,11 +156,11 @@ export default function WhatWeBuild() {
       </svg>
 
       {/* Centered drop: "all of it → one platform." with a downward chevron */}
-      <div className="flex flex-col items-center text-center py-8">
+      <div className="flex flex-col items-center text-center pt-12 pb-8 lg:pt-8">
         <p className="text-[10px] tracking-[0.18em] uppercase mb-3" style={{ color: 'rgba(255,255,255,0.18)' }}>
           all of it, in
         </p>
-        <p className="text-[34px] font-light leading-[1.05] tracking-[-0.025em]" style={{ color: 'rgba(255,255,255,0.55)' }}>
+        <p className="text-[26px] md:text-[34px] font-light leading-[1.05] tracking-[-0.025em]" style={{ color: 'rgba(255,255,255,0.55)' }}>
           one platform.
         </p>
         <svg width="40" height="64" viewBox="0 0 40 64" fill="none" className="mt-5" aria-hidden="true">
